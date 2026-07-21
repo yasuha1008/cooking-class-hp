@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { school } from "@/lib/data";
 
 type Message = { role: "user" | "assistant"; content: string };
 
@@ -9,8 +10,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content:
-        "こんにちは!ことこと料理教室のご案内AIです。コースや料金、体験レッスンについて何でも聞いてください。",
+      content: `こんにちは!${school.name}のご案内AIです。コースや料金、開業支援について何でも聞いてください。`,
     },
   ]);
   const [input, setInput] = useState("");
@@ -56,7 +56,7 @@ export default function Chatbot() {
       {open && (
         <div className="mb-3 flex h-[28rem] w-80 flex-col overflow-hidden rounded-2xl border border-brand-light bg-white shadow-xl">
           <div className="flex items-center justify-between bg-brand px-4 py-3 text-white">
-            <span className="text-sm font-bold">ことこと料理教室 AI案内</span>
+            <span className="text-sm font-bold">{school.name} AI案内</span>
             <button
               aria-label="閉じる"
               onClick={() => setOpen(false)}

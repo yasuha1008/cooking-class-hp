@@ -1,12 +1,12 @@
-import { team, workplaceStats } from "@/lib/data";
+import { school, team, workplaceStats } from "@/lib/data";
 import { SectionHeading } from "./Courses";
 
 export default function Team() {
   return (
     <section className="mx-auto max-w-6xl px-5 py-20">
-      <SectionHeading eyebrow="TEAM" title="ことこと料理教室のチーム" />
+      <SectionHeading eyebrow="TEAM" title="指導するのは" />
       <p className="mx-auto -mt-4 mb-12 max-w-xl text-center text-sm text-foreground/60">
-        料理と食育の専門家が集まり、生徒一人ひとりの「作れた!」に寄り添います
+        中華料理と居酒屋、二つの現場を知る現役店主が直接指導します
       </p>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -31,7 +31,7 @@ export default function Team() {
 
       <div className="mt-14 rounded-2xl bg-brand-light/60 p-8">
         <h4 className="mb-6 text-center text-sm font-bold text-foreground/70">
-          数字でみることこと料理教室の働き方
+          数字で見る{school.name}
         </h4>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
           {workplaceStats.map((s) => (

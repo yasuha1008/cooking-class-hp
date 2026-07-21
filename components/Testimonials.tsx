@@ -4,12 +4,12 @@ import { SectionHeading } from "./Courses";
 export default function Testimonials() {
   return (
     <section id="testimonials" className="mx-auto max-w-6xl px-5 py-20">
-      <SectionHeading eyebrow="TESTIMONIALS" title="生徒の声" />
+      <SectionHeading eyebrow="TESTIMONIALS" title="受講生の声" />
       <p className="mx-auto -mt-4 mb-12 max-w-xl text-center text-sm text-foreground/60">
-        ことこと料理教室で学び、暮らしが変わった方々のリアルな声
+        サイト公開直後のため、受講生の声は今後追加していきます
       </p>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="mx-auto grid max-w-md gap-6 md:max-w-none md:grid-cols-3">
         {testimonials.map((t) => (
           <div
             key={t.name}

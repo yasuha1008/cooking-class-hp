@@ -72,8 +72,8 @@ export default function ContactForm() {
                   <option value="" disabled>
                     選択してください
                   </option>
-                  <option>体験レッスンについて</option>
-                  <option>法人・団体レッスンについて</option>
+                  <option>単品レシピ・月額コースについて</option>
+                  <option>開業支援プロコースについて</option>
                   <option>取材・メディア</option>
                   <option>その他</option>
                 </select>

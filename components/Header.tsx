@@ -18,7 +18,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-brand-light bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl">🍲</span>
+          <span className="text-2xl">🥢</span>
           <span className="text-lg font-bold tracking-tight text-brand-dark">
             {school.name}
           </span>
@@ -40,7 +40,7 @@ export default function Header() {
           href="#contact"
           className="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-brand-dark md:inline-block"
         >
-          無料体験レッスン予約
+          無料相談を予約
         </a>
 
         <button
@@ -70,7 +70,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
               className="mt-2 rounded-full bg-brand px-5 py-2.5 text-center text-sm font-bold text-white"
             >
-              無料体験レッスン予約
+              無料相談を予約
             </a>
           </nav>
         </div>

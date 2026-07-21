@@ -10,9 +10,9 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "ことこと料理教室 | 『できた!』が、暮らしを変える。",
+  title: "二刀流厨房塾 | 中華と居酒屋、二刀流で「稼げる味」を教える。",
   description:
-    "少人数制のハンズオンレッスンで基礎から本格レシピまで身につく料理教室。和食・フレンチ・パン・お菓子・オンライン・出張レッスンに対応。",
+    "中華料理歴26年・居酒屋経営14年の現役店主によるオンライン料理塾。単品レシピ購入から月額コース、独立開業支援プロコースまで対応。",
 };
 
 export default function RootLayout({

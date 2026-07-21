@@ -102,7 +102,7 @@ export default async function CourseDetailPage({
               href="/#contact-form"
               className="mt-6 block rounded-full bg-brand py-3 text-center text-sm font-bold text-white transition hover:bg-brand-dark"
             >
-              無料体験レッスン予約
+              無料相談を予約
             </Link>
           </aside>
         </section>

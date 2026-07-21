@@ -7,7 +7,7 @@ const infoRows: [string, string][] = [
   ["所在地", school.address],
   ["設立", school.founded],
   ["事業内容", school.business],
-  ["受賞", school.award],
+  ["経歴", school.award],
   ["実績", school.achievement],
 ];
 
@@ -35,9 +35,11 @@ export default function About() {
                 </p>
                 <p className="text-sm text-foreground/60">
                   {school.representative.name}
-                  <span className="ml-1 text-xs text-foreground/40">
-                    ({school.representative.nameEn})
-                  </span>
+                  {school.representative.nameEn && (
+                    <span className="ml-1 text-xs text-foreground/40">
+                      ({school.representative.nameEn})
+                    </span>
+                  )}
                 </p>
               </div>
             </div>
