@@ -17,7 +17,7 @@ export default function Courses() {
             className="group flex flex-col overflow-hidden rounded-2xl border border-brand-light bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg hover:shadow-brand/10"
           >
             <div
-              className={`flex h-36 items-center justify-center bg-gradient-to-br ${c.gradient} text-5xl`}
+              className={`flex h-36 items-center justify-center border-b-2 border-brand/60 bg-gradient-to-br ${c.gradient} text-5xl`}
             >
               {c.emoji}
             </div>
