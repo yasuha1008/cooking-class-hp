@@ -51,7 +51,7 @@ export const courses: Course[] = [
       "中華料理歴26年のノウハウを凝縮。ホームページ制作・業務効率化・レシピ提供までまるごと伴走する独立開業パッケージ。",
     description:
       "中華料理での独立開業を目指す方向けの、最上位の伴走型コースです。看板メニューのレシピ提供だけでなく、集客用ホームページの制作、仕込み・発注などの業務効率化まで、開業に必要な要素をワンストップでサポートします。",
-    gradient: "from-red-300 to-orange-400",
+    gradient: "from-red-950 via-red-900 to-neutral-900",
     emoji: "🥢",
     duration: "個別伴走(期間の目安6ヶ月〜・オンライン)",
     price: "2,000,000円(税込・開業サポート一式)",
@@ -82,7 +82,7 @@ export const courses: Course[] = [
       "居酒屋経営14年(現役)のリアルなノウハウを伝える独立開業パッケージ。ホームページ制作・業務効率化込み。",
     description:
       "現在も居酒屋を経営する店主が、メニュー開発から店舗運営の効率化、集客用ホームページ制作までを伴走支援します。開業後も見据えた「続けられる店」づくりを一緒に設計します。",
-    gradient: "from-amber-400 to-red-400",
+    gradient: "from-amber-900 via-amber-950 to-neutral-900",
     emoji: "🏮",
     duration: "個別伴走(期間の目安6ヶ月〜・オンライン)",
     price: "2,000,000円(税込・開業サポート一式)",
@@ -109,7 +109,7 @@ export const courses: Course[] = [
       "気軽に1品から。中華・居酒屋メニューの実践レシピを、動画と資料でお届けします。",
     description:
       "「まずは1品試してみたい」という方向けに、中華・居酒屋の人気メニューを単品で購入できます。分量・仕込みのコツまで、プロの現場基準で解説します。",
-    gradient: "from-yellow-200 to-amber-300",
+    gradient: "from-neutral-800 to-neutral-900",
     emoji: "🍜",
     duration: "都度購入(視聴期限なし)",
     price: "1レシピ 1,000円(税込)",
@@ -134,7 +134,7 @@ export const courses: Course[] = [
       "毎月新しい中華・居酒屋レシピが届く定額コース。継続して腕を磨きたい方に。",
     description:
       "毎月更新される中華・居酒屋の実践レシピに加え、質問への回答など継続学習をサポートする月額コースです。",
-    gradient: "from-teal-200 to-emerald-300",
+    gradient: "from-emerald-950 via-neutral-900 to-neutral-900",
     emoji: "📅",
     duration: "月額(いつでも解約可)",
     price: "月額 3,000円(税込)",
@@ -159,7 +159,7 @@ export const courses: Course[] = [
       "毎月のレシピ配信に加え、自社オリジナル調味料が届くプレミアムプラン。",
     description:
       "ベーシックコースの内容に加え、店の味を再現するための自社オリジナル調味料を毎月お届けします。本格的な味を、より手軽に自宅で再現したい方向けです。",
-    gradient: "from-rose-300 to-red-400",
+    gradient: "from-rose-950 via-neutral-900 to-neutral-900",
     emoji: "🍶",
     duration: "月額(いつでも解約可)",
     price: "月額 10,000円(税込・調味料込)",

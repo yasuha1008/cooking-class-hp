@@ -32,7 +32,7 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div id="contact-form" className="rounded-2xl bg-white p-6 shadow-sm">
+        <div id="contact-form" className="rounded-2xl bg-card p-6 shadow-sm">
           {submitted ? (
             <div className="flex h-full flex-col items-center justify-center gap-3 py-10 text-center">
               <span className="text-4xl">🍳</span>
@@ -88,7 +88,7 @@ export default function ContactForm() {
               </Field>
               <button
                 type="submit"
-                className="w-full rounded-full bg-brand py-3 text-sm font-bold text-white transition hover:bg-brand-dark"
+                className="w-full rounded-full bg-brand py-3 text-sm font-bold text-neutral-900 transition hover:bg-brand-dark"
               >
                 送信する
               </button>

@@ -13,13 +13,13 @@ export default function Testimonials() {
         {testimonials.map((t) => (
           <div
             key={t.name}
-            className="flex flex-col rounded-2xl border border-brand-light bg-white p-6 shadow-sm"
+            className="flex flex-col rounded-2xl border border-brand-light bg-card p-6 shadow-sm"
           >
             <p className="flex-1 text-sm leading-relaxed text-foreground/70">
               &ldquo;{t.comment}&rdquo;
             </p>
             <div className="mt-6 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand text-sm font-bold text-neutral-900">
                 {t.initial}
               </div>
               <div>

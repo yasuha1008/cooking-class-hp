@@ -13,9 +13,9 @@ export default function Team() {
         {team.map((member) => (
           <div
             key={member.name}
-            className="rounded-2xl border border-brand-light bg-white p-6 text-center shadow-sm"
+            className="rounded-2xl border border-brand-light bg-card p-6 text-center shadow-sm"
           >
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand text-xl font-bold text-white">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand text-xl font-bold text-neutral-900">
               {member.initial}
             </div>
             <h3 className="mt-4 font-bold text-foreground">{member.name}</h3>

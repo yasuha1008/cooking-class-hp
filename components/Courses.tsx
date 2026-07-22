@@ -14,7 +14,7 @@ export default function Courses() {
           <Link
             key={c.slug}
             href={`/courses/${c.slug}`}
-            className="group flex flex-col overflow-hidden rounded-2xl border border-brand-light bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+            className="group flex flex-col overflow-hidden rounded-2xl border border-brand-light bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg hover:shadow-brand/10"
           >
             <div
               className={`flex h-36 items-center justify-center bg-gradient-to-br ${c.gradient} text-5xl`}

@@ -38,7 +38,7 @@ export default function Header() {
 
         <a
           href="#contact"
-          className="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-brand-dark md:inline-block"
+          className="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-neutral-900 shadow-sm transition hover:bg-brand-dark md:inline-block"
         >
           無料相談を予約
         </a>
@@ -68,7 +68,7 @@ export default function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-brand px-5 py-2.5 text-center text-sm font-bold text-white"
+              className="mt-2 rounded-full bg-brand px-5 py-2.5 text-center text-sm font-bold text-neutral-900"
             >
               無料相談を予約
             </a>

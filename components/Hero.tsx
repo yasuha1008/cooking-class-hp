@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-gradient-to-b from-brand-light to-background">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-2 md:items-center md:py-24">
         <div>
-          <p className="mb-4 inline-block rounded-full bg-white px-4 py-1 text-xs font-bold tracking-wide text-brand-dark shadow-sm">
+          <p className="mb-4 inline-block rounded-full border border-brand/30 bg-card px-4 py-1 text-xs font-bold tracking-wide text-brand shadow-sm">
             オンライン完結・全国対応
           </p>
           <h1 className="text-4xl font-black leading-tight tracking-tight text-foreground md:text-5xl">
@@ -17,7 +17,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#courses"
-              className="rounded-full bg-brand px-7 py-3.5 text-sm font-bold text-white shadow-md transition hover:bg-brand-dark"
+              className="rounded-full bg-brand px-7 py-3.5 text-sm font-bold text-neutral-900 shadow-md transition hover:bg-brand-dark"
             >
               コース一覧を見る
             </a>
@@ -33,13 +33,13 @@ export default function Hero() {
         <div className="relative">
           <div className="absolute -top-6 -right-6 h-24 w-24 rounded-full bg-brand/20 blur-2xl" />
           <div className="grid grid-cols-2 gap-4">
-            <div className="col-span-2 flex h-40 items-center justify-center rounded-3xl bg-gradient-to-br from-red-300 to-orange-400 text-6xl shadow-lg">
+            <div className="col-span-2 flex h-40 items-center justify-center rounded-3xl bg-gradient-to-br from-red-950 via-red-900 to-neutral-900 text-6xl shadow-lg ring-1 ring-brand/30">
               🥢
             </div>
-            <div className="flex h-32 items-center justify-center rounded-3xl bg-gradient-to-br from-amber-400 to-red-400 text-5xl shadow-lg">
+            <div className="flex h-32 items-center justify-center rounded-3xl bg-gradient-to-br from-amber-900 via-amber-950 to-neutral-900 text-5xl shadow-lg ring-1 ring-brand/30">
               🏮
             </div>
-            <div className="flex h-32 items-center justify-center rounded-3xl bg-gradient-to-br from-yellow-200 to-amber-300 text-5xl shadow-lg">
+            <div className="flex h-32 items-center justify-center rounded-3xl bg-gradient-to-br from-neutral-800 to-neutral-900 text-5xl shadow-lg ring-1 ring-brand/30">
               🍜
             </div>
           </div>

@@ -26,7 +26,7 @@ export default function About() {
               {school.catchCopy}
             </h3>
             <div className="mt-6 flex items-start gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand text-lg font-bold text-white">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand text-lg font-bold text-neutral-900">
                 {school.representative.name[0]}
               </div>
               <div>
@@ -48,7 +48,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="rounded-2xl bg-white p-6 shadow-sm">
+          <div className="rounded-2xl bg-card p-6 shadow-sm">
             <h4 className="mb-4 text-sm font-bold text-foreground">
               教室情報
             </h4>

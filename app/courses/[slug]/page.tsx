@@ -32,7 +32,7 @@ export default async function CourseDetailPage({
               ← コース一覧に戻る
             </Link>
             <div className="mt-4 text-6xl">{course.emoji}</div>
-            <span className="mt-4 inline-block rounded-full bg-white/70 px-3 py-1 text-xs font-bold text-foreground/70">
+            <span className="mt-4 inline-block rounded-full bg-brand/90 px-3 py-1 text-xs font-bold text-neutral-900">
               {course.category}
             </span>
             <h1 className="mt-3 text-3xl font-black text-foreground md:text-4xl">
@@ -57,7 +57,7 @@ export default async function CourseDetailPage({
             <ol className="mt-4 space-y-3">
               {course.curriculum.map((item, i) => (
                 <li key={item} className="flex gap-3 text-sm">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand text-xs font-bold text-white">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand text-xs font-bold text-neutral-900">
                     {i + 1}
                   </span>
                   <span className="text-foreground/80">{item}</span>
@@ -83,7 +83,7 @@ export default async function CourseDetailPage({
             </div>
           </div>
 
-          <aside className="h-fit rounded-2xl border border-brand-light bg-white p-6 shadow-sm">
+          <aside className="h-fit rounded-2xl border border-brand-light bg-card p-6 shadow-sm">
             <dl className="space-y-4 text-sm">
               <div>
                 <dt className="font-bold text-foreground/50">対象レベル</dt>
@@ -100,7 +100,7 @@ export default async function CourseDetailPage({
             </dl>
             <Link
               href="/#contact-form"
-              className="mt-6 block rounded-full bg-brand py-3 text-center text-sm font-bold text-white transition hover:bg-brand-dark"
+              className="mt-6 block rounded-full bg-brand py-3 text-center text-sm font-bold text-neutral-900 transition hover:bg-brand-dark"
             >
               無料相談を予約
             </Link>

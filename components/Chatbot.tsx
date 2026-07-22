@@ -54,8 +54,8 @@ export default function Chatbot() {
   return (
     <div className="fixed bottom-5 right-5 z-50">
       {open && (
-        <div className="mb-3 flex h-[28rem] w-80 flex-col overflow-hidden rounded-2xl border border-brand-light bg-white shadow-xl">
-          <div className="flex items-center justify-between bg-brand px-4 py-3 text-white">
+        <div className="mb-3 flex h-[28rem] w-80 flex-col overflow-hidden rounded-2xl border border-brand-light bg-card shadow-xl">
+          <div className="flex items-center justify-between bg-brand px-4 py-3 text-neutral-900">
             <span className="text-sm font-bold">{school.name} AI案内</span>
             <button
               aria-label="閉じる"
@@ -75,7 +75,7 @@ export default function Chatbot() {
                 <div
                   className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm leading-relaxed ${
                     m.role === "user"
-                      ? "bg-brand text-white"
+                      ? "bg-brand text-neutral-900"
                       : "bg-brand-light text-foreground"
                   }`}
                 >
@@ -108,7 +108,7 @@ export default function Chatbot() {
             <button
               type="submit"
               disabled={loading}
-              className="rounded-full bg-brand px-4 py-2 text-sm font-bold text-white disabled:opacity-50"
+              className="rounded-full bg-brand px-4 py-2 text-sm font-bold text-neutral-900 disabled:opacity-50"
             >
               送信
             </button>
@@ -119,7 +119,7 @@ export default function Chatbot() {
       <button
         aria-label="チャットを開く"
         onClick={() => setOpen((v) => !v)}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-brand text-2xl text-white shadow-lg transition hover:bg-brand-dark"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-brand text-2xl text-neutral-900 shadow-lg transition hover:bg-brand-dark"
       >
         {open ? "✕" : "💬"}
       </button>
