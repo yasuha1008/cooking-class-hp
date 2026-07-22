@@ -12,9 +12,10 @@ export const school = {
     "広東系中国料理店「彩仙龍」代表 26年(2000年創業・千葉県我孫子市) / 大型飲食施設(約200席・茨城県内)運営 14年",
   achievement: "レッスンはすべてオンライン開催。全国どこからでも受講可能",
   representative: {
-    name: "店主",
-    nameEn: "",
+    name: "林 康男",
+    nameEn: "Yasuo Hayashi",
     role: "代表・主宰",
+    photo: "/photos/profile.jpg",
     message:
       "18歳で飲食業の道に入り、中国料理店・タイ料理店・ホテルでの修行を経て、2000年に広東系中国料理店「彩仙龍」を開店。香港の点心師直伝の飲茶を軸に、地域で愛される店を26年間営んできました。並行して、茨城県内の約200席の大型飲食施設の運営にも14年携わっています。\n\n二刀流厨房塾では、趣味で楽しむ方には気軽に1品からレシピを、本気で独立を目指す方にはお店の仕組みごと伝える開業支援を、オンラインで提供しています。教科書通りではない、現場で磨いた「稼げる味」をここで身につけてください。",
   },
@@ -35,6 +36,7 @@ export type Course = {
   description: string;
   gradient: string;
   emoji: string;
+  photo?: string;
   duration: string;
   price: string;
   level: string;
@@ -53,6 +55,7 @@ export const courses: Course[] = [
       "「まずは1品試してみたい」という方向けに、中華・居酒屋の人気メニューを単品で購入できます。分量・仕込みのコツまで、プロの現場基準で解説します。",
     gradient: "from-neutral-800 to-neutral-900",
     emoji: "🍜",
+    photo: "/photos/dish-plating.jpg",
     duration: "都度購入(視聴期限なし)",
     price: "1レシピ 1,000円(税込)",
     level: "初心者〜中級",
@@ -78,6 +81,7 @@ export const courses: Course[] = [
       "毎月更新される中華・居酒屋の実践レシピ動画に加え、月1回のライブQ&A配信や会員限定コミュニティで、疑問をその場で解決しながら継続学習できる月額コースです。",
     gradient: "from-emerald-950 via-neutral-900 to-neutral-900",
     emoji: "📅",
+    photo: "/photos/dish-3sara.jpg",
     duration: "月額(いつでも解約可)",
     price: "月額 3,000円(税込)",
     level: "初心者〜中級",
@@ -109,6 +113,7 @@ export const courses: Course[] = [
       "ベーシックコースの内容すべてに加え、店の味を再現するための自社オリジナル調味料を毎月お届け。さらに年数回、店主自らが実演するオンライン限定ライブクッキングにも参加できる、最も充実したプランです。",
     gradient: "from-rose-950 via-neutral-900 to-neutral-900",
     emoji: "🍶",
+    photo: "/photos/seasoning.jpg",
     duration: "月額(いつでも解約可)",
     price: "月額 10,000円(税込・調味料込)",
     level: "全レベル対応",
@@ -170,6 +175,7 @@ export const courses: Course[] = [
       "中華料理での独立開業を目指す方向けの、最上位の伴走型コースです。看板メニューのレシピ提供だけでなく、集客用ホームページの制作、仕込み・発注などの業務効率化まで、開業に必要な要素をワンストップでサポートします。",
     gradient: "from-red-950 via-red-900 to-neutral-900",
     emoji: "🥢",
+    photo: "/photos/cooking.jpg",
     duration: "個別伴走(期間の目安6ヶ月〜・オンライン)",
     price: "2,000,000円(税込・開業サポート一式)",
     level: "独立開業を目指す方向け",
@@ -201,6 +207,7 @@ export const courses: Course[] = [
       "現在も居酒屋を経営する店主が、メニュー開発から店舗運営の効率化、集客用ホームページ制作までを伴走支援します。開業後も見据えた「続けられる店」づくりを一緒に設計します。",
     gradient: "from-amber-900 via-amber-950 to-neutral-900",
     emoji: "🏮",
+    photo: "/photos/alcohol.jpg",
     duration: "個別伴走(期間の目安6ヶ月〜・オンライン)",
     price: "2,000,000円(税込・開業サポート一式)",
     level: "独立開業を目指す方向け",
@@ -241,8 +248,9 @@ export const testimonials = [
 
 export const team = [
   {
-    initial: "店",
-    name: "店主",
+    initial: "林",
+    name: "林 康男",
+    photo: "/photos/profile.jpg",
     role: "代表・主宰",
     bio: "広東系中国料理店「彩仙龍」代表(2000年創業・26年)。並行して茨城県内の大型飲食施設(約200席)の運営に14年携わる現役店主。",
   },

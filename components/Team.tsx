@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { school, team, workplaceStats } from "@/lib/data";
 import { SectionHeading } from "./Courses";
 
@@ -15,8 +16,20 @@ export default function Team() {
             key={member.name}
             className="rounded-2xl border border-brand-light bg-card p-6 text-center shadow-sm"
           >
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand text-xl font-bold text-neutral-900">
-              {member.initial}
+            <div className="relative mx-auto h-16 w-16 overflow-hidden rounded-full bg-brand">
+              {member.photo ? (
+                <Image
+                  src={member.photo}
+                  alt={member.name}
+                  fill
+                  className="object-cover"
+                  sizes="64px"
+                />
+              ) : (
+                <span className="flex h-full w-full items-center justify-center text-xl font-bold text-neutral-900">
+                  {member.initial}
+                </span>
+              )}
             </div>
             <h3 className="mt-4 font-bold text-foreground">{member.name}</h3>
             <p className="mt-1 text-xs font-bold text-brand-dark">

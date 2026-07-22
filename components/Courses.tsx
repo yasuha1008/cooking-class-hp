@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { courses } from "@/lib/data";
 
@@ -17,9 +18,19 @@ export default function Courses() {
             className="group flex flex-col overflow-hidden rounded-2xl border border-brand-light bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg hover:shadow-brand/10"
           >
             <div
-              className={`flex h-36 items-center justify-center border-b-2 border-brand/60 bg-gradient-to-br ${c.gradient} text-5xl`}
+              className={`relative flex h-36 items-center justify-center border-b-2 border-brand/60 bg-gradient-to-br ${c.gradient} text-5xl`}
             >
-              {c.emoji}
+              {c.photo ? (
+                <Image
+                  src={c.photo}
+                  alt={c.title}
+                  fill
+                  className="object-cover opacity-80"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              ) : (
+                c.emoji
+              )}
             </div>
             <div className="flex flex-1 flex-col p-6">
               <span className="mb-2 inline-block w-fit rounded-full bg-brand-light px-3 py-1 text-xs font-bold text-brand-dark">

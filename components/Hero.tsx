@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { school } from "@/lib/data";
 
 export default function Hero() {
@@ -33,14 +34,33 @@ export default function Hero() {
         <div className="relative">
           <div className="absolute -top-6 -right-6 h-24 w-24 rounded-full bg-brand/20 blur-2xl" />
           <div className="grid grid-cols-2 gap-4">
-            <div className="col-span-2 flex h-40 items-center justify-center rounded-3xl bg-gradient-to-br from-red-950 via-red-900 to-neutral-900 text-6xl shadow-lg ring-1 ring-brand/30">
-              🥢
+            <div className="relative col-span-2 h-40 overflow-hidden rounded-3xl shadow-lg ring-1 ring-brand/30">
+              <Image
+                src="/photos/dish-3sara.jpg"
+                alt="彩仙龍の料理"
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
-            <div className="flex h-32 items-center justify-center rounded-3xl bg-gradient-to-br from-amber-900 via-amber-950 to-neutral-900 text-5xl shadow-lg ring-1 ring-brand/30">
-              🏮
+            <div className="relative h-32 overflow-hidden rounded-3xl shadow-lg ring-1 ring-brand/30">
+              <Image
+                src="/photos/cooking.jpg"
+                alt="調理風景"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
             </div>
-            <div className="flex h-32 items-center justify-center rounded-3xl bg-gradient-to-br from-neutral-800 to-neutral-900 text-5xl shadow-lg ring-1 ring-brand/30">
-              🍜
+            <div className="relative h-32 overflow-hidden rounded-3xl shadow-lg ring-1 ring-brand/30">
+              <Image
+                src="/photos/alcohol.jpg"
+                alt="こだわりのお酒"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
             </div>
           </div>
         </div>

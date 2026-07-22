@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
@@ -22,16 +23,29 @@ export default async function CourseDetailPage({
       <Header />
       <main className="flex-1">
         <section
-          className={`bg-gradient-to-br ${course.gradient} py-16 text-center`}
+          className={`relative overflow-hidden bg-gradient-to-br ${course.gradient} py-16 text-center`}
         >
-          <div className="mx-auto max-w-3xl px-5">
+          {course.photo && (
+            <>
+              <Image
+                src={course.photo}
+                alt=""
+                fill
+                priority
+                className="object-cover opacity-30"
+                sizes="100vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+            </>
+          )}
+          <div className="relative mx-auto max-w-3xl px-5">
             <Link
               href="/#courses"
               className="text-xs font-bold text-foreground/60 hover:underline"
             >
               ← コース一覧に戻る
             </Link>
-            <div className="mt-4 text-6xl">{course.emoji}</div>
+            {!course.photo && <div className="mt-4 text-6xl">{course.emoji}</div>}
             <span className="mt-4 inline-block rounded-full bg-brand/90 px-3 py-1 text-xs font-bold text-neutral-900">
               {course.category}
             </span>
