@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useSession, signOut } from "next-auth/react";
 import { school } from "@/lib/data";
 
 const navLinks = [
@@ -13,6 +14,7 @@ const navLinks = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const { data: session, status } = useSession();
 
   return (
     <header className="sticky top-0 z-50 border-b border-brand-light bg-background/90 backdrop-blur">
@@ -34,14 +36,40 @@ export default function Header() {
               {link.label}
             </a>
           ))}
+          {session && (
+            <Link
+              href="/library"
+              className="text-sm font-medium text-foreground/80 transition hover:text-brand"
+            >
+              レシピライブラリ
+            </Link>
+          )}
         </nav>
 
-        <a
-          href="#contact"
-          className="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-neutral-900 shadow-sm transition hover:bg-brand-dark md:inline-block"
-        >
-          無料相談を予約
-        </a>
+        <div className="hidden items-center gap-3 md:flex">
+          {status !== "loading" &&
+            (session ? (
+              <button
+                onClick={() => signOut({ callbackUrl: "/" })}
+                className="text-sm font-medium text-foreground/60 hover:text-brand"
+              >
+                ログアウト
+              </button>
+            ) : (
+              <Link
+                href="/login"
+                className="text-sm font-medium text-foreground/80 hover:text-brand"
+              >
+                ログイン
+              </Link>
+            ))}
+          <a
+            href="#contact"
+            className="rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-neutral-900 shadow-sm transition hover:bg-brand-dark"
+          >
+            無料相談を予約
+          </a>
+        </div>
 
         <button
           aria-label="メニューを開く"
@@ -65,6 +93,34 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
+            {session ? (
+              <>
+                <Link
+                  href="/library"
+                  onClick={() => setOpen(false)}
+                  className="text-sm font-medium text-foreground/80"
+                >
+                  レシピライブラリ
+                </Link>
+                <button
+                  onClick={() => {
+                    setOpen(false);
+                    signOut({ callbackUrl: "/" });
+                  }}
+                  className="text-left text-sm font-medium text-foreground/60"
+                >
+                  ログアウト
+                </button>
+              </>
+            ) : (
+              <Link
+                href="/login"
+                onClick={() => setOpen(false)}
+                className="text-sm font-medium text-foreground/80"
+              >
+                ログイン
+              </Link>
+            )}
             <a
               href="#contact"
               onClick={() => setOpen(false)}
