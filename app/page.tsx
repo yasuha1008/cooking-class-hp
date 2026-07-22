@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import StatsBar from "@/components/StatsBar";
 import Courses from "@/components/Courses";
+import MonthlyPlans from "@/components/MonthlyPlans";
 import News from "@/components/News";
 import Testimonials from "@/components/Testimonials";
 import About from "@/components/About";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <StatsBar />
         <Courses />
+        <MonthlyPlans />
         <News />
         <Testimonials />
         <About />
