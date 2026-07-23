@@ -36,8 +36,8 @@ export default function Hero() {
           <div className="grid grid-cols-2 gap-4">
             <div className="relative col-span-2 h-40 overflow-hidden rounded-3xl shadow-lg ring-1 ring-brand/30">
               <Image
-                src="/photos/dish-3sara.jpg"
-                alt="彩仙龍の料理"
+                src="/photos/cooking.jpg"
+                alt="彩仙龍の調理風景"
                 fill
                 priority
                 className="object-cover"
@@ -46,8 +46,8 @@ export default function Hero() {
             </div>
             <div className="relative h-32 overflow-hidden rounded-3xl shadow-lg ring-1 ring-brand/30">
               <Image
-                src="/photos/cooking.jpg"
-                alt="調理風景"
+                src="/photos/dish-plating.jpg"
+                alt="彩仙龍の料理"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 50vw, 25vw"

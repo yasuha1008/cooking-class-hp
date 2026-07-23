@@ -36,7 +36,7 @@ export const recipes: Recipe[] = [
     category: "中華",
     title: "油淋鶏",
     summary: "カリッと揚げた鶏肉に、特製の甘酢ダレをかけた一品。",
-    photo: "/photos/dish-3sara.jpg",
+    photo: "/photos/cooking.jpg",
     videoUrl: "",
     ingredients: [
       "鶏もも肉 1枚",

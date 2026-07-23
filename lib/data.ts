@@ -81,7 +81,7 @@ export const courses: Course[] = [
       "毎月更新される中華・居酒屋の実践レシピ動画に加え、月1回のライブQ&A配信や会員限定コミュニティで、疑問をその場で解決しながら継続学習できる月額コースです。",
     gradient: "from-emerald-950 via-neutral-900 to-neutral-900",
     emoji: "📅",
-    photo: "/photos/dish-3sara.jpg",
+    photo: "/photos/dish-plating.jpg",
     duration: "月額(いつでも解約可)",
     price: "月額 3,000円(税込)",
     level: "初心者〜中級",
