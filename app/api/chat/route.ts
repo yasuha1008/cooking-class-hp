@@ -2,7 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
 import { school, courses } from "@/lib/data";
 
-const systemPrompt = `あなたは「${school.name}」の公式サイトに設置されたAIチャットボットです。
+const systemPrompt = `あなたは「${school.name}」の公式サイトに設置されたAIチャットボット「塾長AI」です。
 以下の教室情報だけをもとに、来訪者の質問に日本語で簡潔に答えてください。情報にないことは正直に「担当者にお問い合わせください」と案内してください。
 
 【教室情報】

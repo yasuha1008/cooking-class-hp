@@ -10,7 +10,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: `こんにちは!${school.name}のご案内AIです。コースや料金、開業支援について何でも聞いてください。`,
+      content: `こんにちは!${school.name}の「塾長AI」です。コースや料金、開業支援について何でも聞いてください。`,
     },
   ]);
   const [input, setInput] = useState("");
@@ -56,7 +56,7 @@ export default function Chatbot() {
       {open && (
         <div className="mb-3 flex h-[28rem] w-80 flex-col overflow-hidden rounded-2xl border border-brand-light bg-card shadow-xl">
           <div className="flex items-center justify-between bg-brand px-4 py-3 text-neutral-900">
-            <span className="text-sm font-bold">{school.name} AI案内</span>
+            <span className="text-sm font-bold">{school.name} 塾長AI</span>
             <button
               aria-label="閉じる"
               onClick={() => setOpen(false)}
