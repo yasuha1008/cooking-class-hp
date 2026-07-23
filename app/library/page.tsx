@@ -3,7 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/auth";
 import { sql, ensureSchema } from "@/lib/db";
-import { recipes } from "@/lib/recipes";
+import { getAllRecipes } from "@/lib/recipes-db";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -12,9 +12,10 @@ export default async function LibraryPage() {
   if (!session?.user?.id) redirect("/login");
 
   await ensureSchema();
-  const rows = await sql`
-    SELECT recipe_slug FROM recipe_progress WHERE user_id = ${session.user.id}
-  `;
+  const [rows, recipes] = await Promise.all([
+    sql`SELECT recipe_slug FROM recipe_progress WHERE user_id = ${session.user.id}`,
+    getAllRecipes(),
+  ]);
   const completedSlugs = new Set(rows.map((r) => r.recipe_slug as string));
 
   return (
@@ -47,9 +48,9 @@ export default async function LibraryPage() {
                     </span>
                   )}
                   <div className="relative h-32 border-b-2 border-brand/60">
-                    {r.photo && (
+                    {r.photo_url && (
                       <Image
-                        src={r.photo}
+                        src={r.photo_url}
                         alt={r.title}
                         fill
                         className="object-cover opacity-80"

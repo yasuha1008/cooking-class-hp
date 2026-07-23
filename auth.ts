@@ -2,6 +2,7 @@ import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import { sql, ensureSchema } from "@/lib/db";
+import { isAdmin } from "@/lib/admin";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   trustHost: true,
@@ -44,6 +45,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     async session({ session, token }) {
       if (session.user && token.id) {
         session.user.id = token.id as string;
+        session.user.isAdmin = isAdmin(session.user.email);
       }
       return session;
     },

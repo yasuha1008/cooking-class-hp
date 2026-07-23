@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { auth } from "@/auth";
 import { sql, ensureSchema } from "@/lib/db";
-import { recipes } from "@/lib/recipes";
+import { getRecipeBySlug } from "@/lib/recipes-db";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RecipeChecklist from "@/components/RecipeChecklist";
@@ -13,7 +13,7 @@ export default async function RecipeDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const recipe = recipes.find((r) => r.slug === slug);
+  const recipe = await getRecipeBySlug(slug);
   if (!recipe) notFound();
 
   const session = await auth();
@@ -59,9 +59,9 @@ export default async function RecipeDetailPage({
           <p className="mt-2 text-sm text-foreground/70">{recipe.summary}</p>
 
           <div className="mt-8 flex aspect-video items-center justify-center rounded-2xl border border-brand-light bg-card">
-            {recipe.videoUrl ? (
+            {recipe.video_url ? (
               <iframe
-                src={recipe.videoUrl}
+                src={recipe.video_url}
                 className="h-full w-full rounded-2xl"
                 allowFullScreen
               />

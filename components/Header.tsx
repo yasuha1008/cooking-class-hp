@@ -44,6 +44,14 @@ export default function Header() {
               レシピライブラリ
             </Link>
           )}
+          {session?.user.isAdmin && (
+            <Link
+              href="/admin/recipes"
+              className="text-sm font-medium text-foreground/80 transition hover:text-brand"
+            >
+              管理画面
+            </Link>
+          )}
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
@@ -102,6 +110,15 @@ export default function Header() {
                 >
                   レシピライブラリ
                 </Link>
+                {session.user.isAdmin && (
+                  <Link
+                    href="/admin/recipes"
+                    onClick={() => setOpen(false)}
+                    className="text-sm font-medium text-foreground/80"
+                  >
+                    管理画面
+                  </Link>
+                )}
                 <button
                   onClick={() => {
                     setOpen(false);

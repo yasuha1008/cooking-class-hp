@@ -51,5 +51,29 @@ export async function ensureSchema() {
     )
   `;
 
+  await sql`
+    CREATE TABLE IF NOT EXISTS recipes (
+      id SERIAL PRIMARY KEY,
+      slug TEXT UNIQUE NOT NULL,
+      category TEXT NOT NULL,
+      title TEXT NOT NULL,
+      summary TEXT NOT NULL,
+      photo_url TEXT,
+      video_url TEXT,
+      ingredients TEXT[] NOT NULL DEFAULT '{}',
+      steps TEXT[] NOT NULL DEFAULT '{}',
+      created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    )
+  `;
+
+  const { recipes: seedRecipes } = await import("./recipes");
+  for (const r of seedRecipes) {
+    await sql`
+      INSERT INTO recipes (slug, category, title, summary, photo_url, video_url, ingredients, steps)
+      VALUES (${r.slug}, ${r.category}, ${r.title}, ${r.summary}, ${r.photo ?? null}, ${r.videoUrl ?? null}, ${r.ingredients}, ${r.steps})
+      ON CONFLICT (slug) DO NOTHING
+    `;
+  }
+
   migrated = true;
 }
